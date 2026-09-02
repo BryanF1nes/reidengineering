@@ -1,6 +1,4 @@
 import "./styles.css";
+import Main from "./controller/main";
 
-const button = document.querySelector("button");
-button.addEventListener("click", () => {
-    document.body.classList.toggle("light");
-})
+Main.init();
