@@ -96,7 +96,8 @@ const Leadership = {
             "max-w-[1200px]",
             "mx-auto",
             "gap-8",
-            "my-0"
+            "my-0",
+            "max-xl:grid-cols-1"
         );
 
         cards.map((card) => {

@@ -7,7 +7,7 @@ const Navbar = {
         nav.classList.add(
             "flex",
             "items-center",
-            "w-[1200px]",
+            "max-w-[1200px]",
             "justify-between",
             "py-4",
             "mx-auto"
