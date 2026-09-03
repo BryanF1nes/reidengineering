@@ -34,7 +34,7 @@ const Services = {
             "flex",
             "flex-col",
             "justify-between",
-            "bg-bg",
+            "bg-card",
             "p-[48px]",
             "gap-[42px]"
         );

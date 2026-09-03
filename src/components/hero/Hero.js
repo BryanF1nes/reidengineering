@@ -27,7 +27,6 @@ const Hero = {
         const section = document.createElement("section");
 
         section.classList.add(
-            "bg-bg",
             "relative",
             "min-h-[1000px]",
             "flex",
@@ -181,7 +180,7 @@ const Hero = {
             "z-20"
         );
 
-        path.setAttribute("fill", "var(--color-bg)");
+        path.setAttribute("fill", "#FFFFFF");
 
         path.setAttribute(
             "d",
