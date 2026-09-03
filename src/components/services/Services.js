@@ -1,5 +1,3 @@
-import Card from "../card/Card";
-
 const Services = {
     cards: [
         {
@@ -33,7 +31,8 @@ const Services = {
             "flex-col",
             "justify-between",
             "bg-bg",
-            "p-[96px]"
+            "p-[48px]",
+            "gap-[42px]"
         );
 
         section.append(
@@ -74,6 +73,68 @@ const Services = {
     },
 
     createCards(cards) {
+        const container = document.createElement("div");
+        container.classList.add("flex", "items-stretch", "max-w-[1200px]", "mx-auto", "justify-between", "gap-8");
+
+        cards.map((card) => {
+            const cardContainer = document.createElement("div");
+            const img = document.createElement("img");
+            const heading = document.createElement("h6");
+            const body = document.createElement("p");
+            const a = document.createElement("a");
+
+            cardContainer.classList.add(
+                "flex",
+                "flex-col",
+                "items-center",
+                "justify-center",
+                "px-6",
+                "gap-6"
+            );
+
+            img.src = card.icon;
+            img.classList.add(
+                "w-[50px]",
+                "h-[50px]"
+            );
+
+            heading.textContent = card.title;
+            heading.classList.add(
+                "text-h6",
+                "font-semibold",
+                "text-text-primary"
+            );
+
+            body.textContent = card.body;
+            body.classList.add(
+                "text-body",
+                "text-text-primary",
+                "text-center"
+            );
+
+            if (card.button) {
+                a.textContent = "Learn More";
+                a.href = card.route;
+                a.dataset.route = card.route;
+
+                a.classList.add(
+                    "mt-auto",
+                    "font-semibold",
+                    "text-text-primary",
+                    "border-2",
+                    "border-primary-800",
+                    "px-8",
+                    "py-4",
+                    "rounded-md",
+                    "shadow-lg",
+                );
+            }
+
+            cardContainer.append(img, heading, body, a);
+            container.append(cardContainer);
+        });
+
+        return container;
     },
 
     createButton() {
