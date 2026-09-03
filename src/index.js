@@ -1,4 +1,6 @@
+import NavbarController from "./controllers/NavbarController";
+import Router from "./services/Router";
 import "./styles.css";
-import Main from "./controller/main";
 
-Main.init();
+NavbarController.init();
+Router.init();
