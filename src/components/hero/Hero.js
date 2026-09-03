@@ -43,7 +43,7 @@ const Hero = {
             backgroundTwo,
             this.createOverlay(),
             this.createHero(),
-            this.createIndicators()
+            this.createIndicators(),
         );
 
         container.appendChild(section);
@@ -116,14 +116,14 @@ const Hero = {
             "For over 40 years, we have been selected by many clients to be their trusted engineering partner.";
 
         header.classList.add(
-            "text-6xl",
+            "text-h1",
             "font-bold",
             "text-white",
-            "max-w-[400px]"
+            "max-w-[450px]"
         );
 
         subHeader.classList.add(
-            "text-md",
+            "text-body",
             "text-white",
             "max-w-[400px]"
         );
@@ -162,7 +162,7 @@ const Hero = {
             "bottom-8",
             "left-1/2",
             "-translate-x-1/2",
-            "z-10",
+            "z-30",
             "flex",
             "items-center",
             "gap-2"
