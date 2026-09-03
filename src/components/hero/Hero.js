@@ -21,8 +21,9 @@ const Hero = {
         const section = document.createElement("section");
 
         section.classList.add(
+            "bg-bg",
             "relative",
-            "min-h-[900px]",
+            "min-h-[1000px]",
             "flex",
             "items-center",
             "overflow-hidden"
@@ -43,6 +44,7 @@ const Hero = {
             backgroundTwo,
             this.createOverlay(),
             this.createHero(),
+            this.createCurve(),
             this.createIndicators(),
         );
 
@@ -68,7 +70,7 @@ const Hero = {
             "bg-center",
             "transition-opacity",
             "duration-[2000ms]",
-            "ease-in-out"
+            "ease-in-out",
         );
 
         return background;
@@ -106,7 +108,8 @@ const Hero = {
             "w-full",
             "max-w-[1200px]",
             "mx-auto",
-            "px-8"
+            "px-8",
+            "-translate-y-10"
         );
 
         header.textContent =
@@ -134,14 +137,14 @@ const Hero = {
 
         cta.classList.add(
             "font-semibold",
-            "bg-primary-500",
+            "bg-primary-600",
             "text-white",
             "px-4",
             "py-2",
             "rounded-md",
             "shadow-lg",
             "shadow-primary-500/50",
-            "hover:bg-primary-600",
+            "hover:bg-primary-500",
             "hover:text-white"
         );
 
@@ -154,12 +157,42 @@ const Hero = {
         return container;
     },
 
+    createCurve() {
+        const namespace = "http://www.w3.org/2000/svg";
+
+        const svg = document.createElementNS(namespace, "svg");
+        const path = document.createElementNS(namespace, "path");
+
+        svg.setAttribute("viewBox", "0 0 1440 200");
+        svg.setAttribute("preserveAspectRatio", "none");
+
+        svg.classList.add(
+            "absolute",
+            "bottom-0",
+            "left-0",
+            "w-full",
+            "h-[140px]",
+            "z-20"
+        );
+
+        path.setAttribute("fill", "var(--color-bg)");
+
+        path.setAttribute(
+            "d",
+            "M0 100 Q720 0 1440 100 L1440 200 L0 200 Z"
+        );
+
+        svg.appendChild(path);
+
+        return svg;
+    },
+
     createIndicators() {
         const container = document.createElement("div");
 
         container.classList.add(
             "absolute",
-            "bottom-8",
+            "bottom-[140px]",
             "left-1/2",
             "-translate-x-1/2",
             "z-30",

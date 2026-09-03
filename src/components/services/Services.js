@@ -1,21 +1,25 @@
+import cog from "../../../assets/main/vaadin_cog-o.svg";
+import ph from "../../../assets/main/material-symbols_water-ph-outline.svg";
+import design from "../../../assets/main/streamline-ultimate_blueprint-helmet-1.svg";
+
 const Services = {
     cards: [
         {
-            icon: '',
+            icon: cog,
             title: 'General services',
             body: 'While wastewater treatment is our core niche and focus other business areas such as land development, water and sewer pumping are just some of our services supported by our firm.',
             button: true,
             route: '/services'
         },
         {
-            icon: '',
+            icon: ph,
             title: 'Wastewater Treatment',
             body: 'We will guide you through the regulatory process and assist you in determining the most feasible design and project approach that will meet all stakeholders expectations and requirements.',
             button: true,
             route: '/services'
         },
         {
-            icon: '',
+            icon: design,
             title: 'Design Build',
             body: 'Design build has offered many clients the opportunity to stream line the overall project lifecycle saving valuable time due to the compressed design and construction schedules.',
             button: true,
@@ -74,7 +78,7 @@ const Services = {
 
     createCards(cards) {
         const container = document.createElement("div");
-        container.classList.add("flex", "items-stretch", "max-w-[1200px]", "mx-auto", "justify-between", "gap-8");
+        container.classList.add("flex", "items-stretch", "max-w-[1200px]", "mx-auto", "justify-between", "gap-8", "my-8");
 
         cards.map((card) => {
             const cardContainer = document.createElement("div");
@@ -88,8 +92,9 @@ const Services = {
                 "flex-col",
                 "items-center",
                 "justify-center",
-                "px-6",
-                "gap-6"
+                "px-10",
+                "gap-6",
+                "mb-[24px]"
             );
 
             img.src = card.icon;
@@ -109,7 +114,8 @@ const Services = {
             body.classList.add(
                 "text-body",
                 "text-text-primary",
-                "text-center"
+                "text-center",
+                "tracking-[0.03em]"
             );
 
             if (card.button) {
@@ -162,7 +168,7 @@ const Services = {
             "rounded-md",
             "shadow-lg",
             "shadow-primary-500/50",
-            "hover:bg-primary-600",
+            "hover:bg-primary-500",
             "hover:text-white",
         );
 

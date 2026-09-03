@@ -9,6 +9,18 @@ const Router = {
     },
 
     init() {
+        document.addEventListener("click", (event) => {
+            const link = event.target.closest("[data-route]");
+
+            if (!link) {
+                return;
+            }
+
+            event.preventDefault();
+
+            this.navigate(link.dataset.route);
+        });
+
         window.addEventListener("popstate", () => {
             this.load(window.location.pathname);
         });
@@ -18,7 +30,6 @@ const Router = {
 
     navigate(path) {
         window.history.pushState({}, "", path);
-
         this.load(path);
     },
 

@@ -92,14 +92,14 @@ const Navbar = {
             if (item.primary) {
                 link.classList.add(
                     "font-semibold",
-                    "bg-primary-500",
+                    "bg-primary-600",
                     "text-white",
                     "px-4",
                     "py-2",
                     "rounded-md",
                     "shadow-lg",
                     "shadow-primary-500/50",
-                    "hover:bg-primary-600",
+                    "hover:bg-primary-500",
                     "hover:text-white",
                 );
             }
