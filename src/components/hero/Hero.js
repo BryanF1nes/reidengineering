@@ -15,9 +15,15 @@ const Hero = {
 
     currentImage: 0,
     indicators: [],
+    backgroundOne: null,
+    backgroundTwo: null,
     carouselInterval: null,
 
     render(container) {
+        this.destroy();
+
+        this.currentImage = 0;
+
         const section = document.createElement("section");
 
         section.classList.add(
@@ -224,12 +230,7 @@ const Hero = {
             );
 
             button.addEventListener("click", () => {
-                this.changeImage(
-                    index,
-                    this.backgroundOne,
-                    this.backgroundTwo
-                );
-
+                this.changeImage(index);
                 this.restartCarousel();
             });
 
@@ -270,45 +271,27 @@ const Hero = {
         });
     },
 
-    changeImage(
-        index,
-        backgroundOne,
-        backgroundTwo
-    ) {
+    changeImage(index) {
         if (index === this.currentImage) {
             return;
         }
 
-        const activeBackground =
-            this.currentImage % 2 === 0
-                ? backgroundOne
-                : backgroundTwo;
-
-        const inactiveBackground =
-            this.currentImage % 2 === 0
-                ? backgroundTwo
-                : backgroundOne;
+        const activeBackground = this.backgroundOne;
+        const inactiveBackground = this.backgroundTwo;
 
         this.currentImage = index;
 
         inactiveBackground.style.backgroundImage =
             `url(${this.images[index]})`;
 
-        inactiveBackground.classList.remove(
-            "opacity-0"
-        );
+        inactiveBackground.classList.remove("opacity-0");
+        inactiveBackground.classList.add("opacity-100");
 
-        inactiveBackground.classList.add(
-            "opacity-100"
-        );
+        activeBackground.classList.remove("opacity-100");
+        activeBackground.classList.add("opacity-0");
 
-        activeBackground.classList.remove(
-            "opacity-100"
-        );
-
-        activeBackground.classList.add(
-            "opacity-0"
-        );
+        this.backgroundOne = inactiveBackground;
+        this.backgroundTwo = activeBackground;
 
         this.updateIndicators();
     },
@@ -325,30 +308,31 @@ const Hero = {
                 (this.currentImage + 1) %
                 this.images.length;
 
-            this.changeImage(
-                nextImage,
-                backgroundOne,
-                backgroundTwo
-            );
+            this.changeImage(nextImage);
         }, 6000);
     },
 
     restartCarousel() {
-        clearInterval(
-            this.carouselInterval
-        );
+        clearInterval(this.carouselInterval);
 
         this.carouselInterval = setInterval(() => {
             const nextImage =
                 (this.currentImage + 1) %
                 this.images.length;
 
-            this.changeImage(
-                nextImage,
-                this.backgroundOne,
-                this.backgroundTwo
-            );
-        }, 7000);
+            this.changeImage(nextImage);
+        }, 6000);
+    },
+
+    destroy() {
+        if (this.carouselInterval) {
+            clearInterval(this.carouselInterval);
+            this.carouselInterval = null;
+        }
+
+        this.backgroundOne = null;
+        this.backgroundTwo = null;
+        this.indicators = [];
     },
 };
 

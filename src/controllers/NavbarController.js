@@ -1,9 +1,7 @@
 import Navbar from "../components/navbar/Navbar";
-import Router from "../services/Router";
 
 const NavbarController = {
     items: [
-        { label: "Home", route: "/" },
         { label: "About Us", route: "/about" },
         { label: "Services", route: "/services" },
         { label: "Contact Us", route: "/contact", primary: true },
