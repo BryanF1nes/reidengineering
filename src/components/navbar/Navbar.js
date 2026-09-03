@@ -9,7 +9,8 @@ const Navbar = {
             "items-center",
             "w-[1200px]",
             "justify-between",
-            "py-4"
+            "py-4",
+            "mx-auto"
         );
 
         nav.append(

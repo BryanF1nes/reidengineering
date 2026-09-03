@@ -1,15 +1,10 @@
+import Hero from "../hero/Hero";
+
 const Home = {
     render(container) {
-        const heading = document.createElement("h1");
-
-        heading.textContent = "Welcome to Reid Engineering";
-
-        heading.classList.add(
-            "text-4xl",
-            "font-semibold"
+        container.appendChild(
+            Hero.render(document.createElement("div"))
         );
-
-        container.appendChild(heading);
     },
 };
 
