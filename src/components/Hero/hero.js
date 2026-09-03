@@ -1,3 +1,5 @@
+import caroline from "../../../assets/main/projects/caroline_000_6742.jpg";
+
 class Hero {
     init(body) {
         body.append(this.structure());
@@ -7,8 +9,9 @@ class Hero {
         const header = document.createElement("header");
         const heroContent = document.createElement("div");
 
-        header.classList.add("hero");
-        heroContent.classList.add("hero-content");
+        header.style.backgroundImage = `url('${caroline}')`
+        header.classList.add("bg-cover", "bg-center", "h-[950px]", "w-full");
+        heroContent.classList.add("");
 
         heroContent.appendChild(this.content());
         header.append(heroContent, this.curve());

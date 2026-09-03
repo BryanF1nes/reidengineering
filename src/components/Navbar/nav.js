@@ -8,7 +8,7 @@ class Navbar {
     structure() {
         const nav = document.createElement("nav");
         nav.append(this.leftNav(), this.rightNav());
-        nav.classList.add("nav");
+        nav.classList.add("flex", "items-center", "w-[1200px]", "justify-between", "py-4");
 
         return nav;
     }
@@ -21,15 +21,15 @@ class Navbar {
         const headerSubText = document.createElement("p");
 
         logo.src = reidLogo;
-        logo.classList.add("logo");
+        logo.classList.add("w-[60px]", "h-[60px]");
 
         headerText.textContent = "Reid Engineering Company"
         headerSubText.textContent = "The Earth is the Lord's..."
 
-        headerText.classList.add("semi");
-        headerSubText.classList.add("light");
+        headerText.classList.add("font-semibold", "text-text-primary");
+        headerSubText.classList.add("font-light", "text-text-primary");
 
-        container.classList.add("container", "s-3")
+        container.classList.add("flex", "items-center", "gap-2")
         headerContainer.append(headerText, headerSubText);
 
         container.append(logo, headerContainer);
@@ -41,16 +41,16 @@ class Navbar {
         const linkContainer = document.createElement("div");
         const links = ["About Us", "Services", "Contact Us"];
 
-        linkContainer.classList.add("container", "s-6");
+        linkContainer.classList.add("flex", "items-center", "justify-between", "gap-10");
 
         links.forEach((link) => {
             const a = document.createElement("a");
             a.href = "/";
             a.textContent = link;
-            a.classList.add("links");
+            a.classList.add("font-light");
 
             if (link.startsWith("C")) {
-                a.classList.add("button");
+                a.classList.add("font-semibold", "bg-primary-500", "text-white", "px-4", "py-2", "rounded-md");
             }
 
             linkContainer.appendChild(a);
