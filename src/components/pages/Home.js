@@ -2,6 +2,7 @@ import Hero from "../hero/Hero";
 import Leadership from "../leadership/Leadership";
 import Services from "../services/Services";
 import Numbers from "../numbers/Numbers";
+import Projects from "../projects/Projects";
 
 const Home = {
     div: document.createElement("div"),
@@ -11,7 +12,8 @@ const Home = {
             Hero.render(this.div),
             Services.render(this.div),
             Leadership.render(this.div),
-            Numbers.render(this.div)
+            Numbers.render(this.div),
+            Projects.render(this.div)
         );
     },
 };

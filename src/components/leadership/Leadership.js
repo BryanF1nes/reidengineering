@@ -47,8 +47,8 @@ const Leadership = {
             "flex-col",
             "justify-between",
             "bg-bg",
-            "p-[48px]",
-            "gap-[42px]"
+            "p-[96px]",
+            "gap-[42px]",
         );
 
         section.append(

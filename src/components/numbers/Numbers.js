@@ -21,12 +21,16 @@ const Numbers = {
         const section = document.createElement("section");
 
         section.classList.add(
+            "bg-linear-to-bl",
+            "from-primary-500",
+            "to-primary-700",
             "flex",
             "flex-col",
             "justify-between",
             "bg-card",
-            "p-[48px]",
-            "gap-[42px]"
+            "p-[96px]",
+            "gap-[42px]",
+            "text-white"
         );
 
         section.append(
@@ -36,7 +40,61 @@ const Numbers = {
 
         container.appendChild(section);
 
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                const entry = entries[0];
+
+                if (entry.isIntersecting) {
+                    this.animateNumbers(section);
+
+                    // Only animate once
+                    observer.unobserve(section);
+                }
+            },
+            {
+                threshold: 0.3
+            }
+        );
+
+        observer.observe(section);
+
         return section;
+    },
+
+    animateNumbers(section) {
+        const values = section.querySelectorAll("[data-value]");
+
+        values.forEach((element, index) => {
+            const { value: target, suffix } = this.numbers[index];
+
+            const duration = 2500;
+            const startTime = performance.now();
+
+            const update = (currentTime) => {
+                const progress = Math.min(
+                    (currentTime - startTime) / duration,
+                    1
+                );
+
+                // Ease-out animation
+                const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+                const currentValue = Math.floor(
+                    target * easedProgress
+                );
+
+                element.textContent = `${currentValue}${suffix}`;
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    // Make sure we end exactly on the target
+                    element.textContent = `${target}${suffix}`;
+                }
+            };
+
+            requestAnimationFrame(update);
+        });
     },
 
     createTagLine() {
@@ -51,21 +109,40 @@ const Numbers = {
             "gap-2",
             "w-full",
             "max-w-[1200px]",
-            "mx-auto"
+            "mx-auto",
         );
 
-        identifier.classList.add("text-small", "font-light", "text-text-primary");
-        header.classList.add("text-h2", "font-semibold", "text-text-primary", "max-md:text-h4");
-        body.classList.add("text-body", "tracking-[0.03em]", "text-text-primary", "max-md:text-small");
+        identifier.classList.add(
+            "text-small",
+            "font-light"
+        );
+
+        header.classList.add(
+            "text-h2",
+            "font-semibold",
+            "max-md:text-h4"
+        );
+
+        body.classList.add(
+            "text-body",
+            "tracking-[0.03em]",
+            "max-md:text-small"
+        );
 
         identifier.textContent = "numbers";
         header.textContent = "The Numbers That Matter";
-        body.textContent = "We want to stay humble but we do have some numbers we feel are worth sharing!";
+        body.textContent =
+            "We want to stay humble but we do have some numbers we feel are worth sharing!";
 
-        container.append(identifier, header, body);
+        container.append(
+            identifier,
+            header,
+            body
+        );
 
         return container;
     },
+
     createNumbers(numbers) {
         const container = document.createElement("div");
 
@@ -74,7 +151,7 @@ const Numbers = {
             "grid-cols-1",
             "sm:grid-cols-3",
             "w-full",
-            "max-w-7xl",
+            "max-w-4xl",
             "mx-auto",
             "gap-8"
         );
@@ -84,7 +161,12 @@ const Numbers = {
             const valueElement = document.createElement("h3");
             const labelElement = document.createElement("p");
 
-            valueElement.textContent = `${value}${suffix}`;
+            // Start the counter at zero
+            valueElement.textContent = `0${suffix}`;
+
+            // Store the target value
+            valueElement.dataset.value = value;
+
             labelElement.textContent = label;
 
             numberContainer.classList.add(
@@ -96,15 +178,13 @@ const Numbers = {
             );
 
             valueElement.classList.add(
-                "text-h1",
-                "font-semibold",
-                "text-text-primary"
+                "text-[76px]",
+                "font-[1000]",
             );
 
             labelElement.classList.add(
                 "text-body",
                 "font-light",
-                "text-text-primary"
             );
 
             numberContainer.append(
