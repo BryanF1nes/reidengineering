@@ -64,8 +64,8 @@ const Services = {
             "mx-auto"
         );
         identifier.classList.add("text-small", "font-light", "text-text-primary");
-        header.classList.add("text-h2", "font-semibold", "text-text-primary");
-        body.classList.add("text-body", "tracking-[0.03em]", "text-text-primary");
+        header.classList.add("text-h2", "font-semibold", "text-text-primary", "max-md:text-h4");
+        body.classList.add("text-body", "tracking-[0.03em]", "text-text-primary", "max-md:text-small");
 
         identifier.textContent = "services";
         header.textContent = "Our Services";
@@ -78,7 +78,7 @@ const Services = {
 
     createCards(cards) {
         const container = document.createElement("div");
-        container.classList.add("flex", "items-stretch", "max-w-[1200px]", "mx-auto", "justify-between", "gap-8", "my-8");
+        container.classList.add("flex", "items-stretch", "max-w-[1200px]", "mx-auto", "justify-between", "gap-8", "my-8", "max-lg:flex-col");
 
         cards.map((card) => {
             const cardContainer = document.createElement("div");
@@ -94,7 +94,8 @@ const Services = {
                 "justify-center",
                 "px-10",
                 "gap-6",
-                "mb-[24px]"
+                "mb-[24px]",
+                "max-md:px-2",
             );
 
             img.src = card.icon;
@@ -107,7 +108,8 @@ const Services = {
             heading.classList.add(
                 "text-h6",
                 "font-semibold",
-                "text-text-primary"
+                "text-text-primary",
+                "max-md:text-body"
             );
 
             body.textContent = card.body;
@@ -115,7 +117,8 @@ const Services = {
                 "text-body",
                 "text-text-primary",
                 "text-center",
-                "tracking-[0.03em]"
+                "tracking-[0.03em]",
+                "max-md:text-small"
             );
 
             if (card.button) {
@@ -129,10 +132,11 @@ const Services = {
                     "text-text-primary",
                     "border-2",
                     "border-primary-800",
-                    "px-8",
-                    "py-4",
+                    "px-6",
+                    "py-3",
                     "rounded-md",
                     "shadow-lg",
+                    "max-md:text-small"
                 );
             }
 
@@ -170,6 +174,7 @@ const Services = {
             "shadow-primary-500/50",
             "hover:bg-primary-500",
             "hover:text-white",
+            "max-md:text-small"
         );
 
         container.append(cta);

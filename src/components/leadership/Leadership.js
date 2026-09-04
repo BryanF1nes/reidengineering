@@ -75,8 +75,8 @@ const Leadership = {
             "mx-auto"
         );
         identifier.classList.add("text-small", "font-light", "text-text-primary");
-        header.classList.add("text-h2", "font-semibold", "text-text-primary");
-        body.classList.add("text-body", "tracking-[0.03em]", "text-text-primary");
+        header.classList.add("text-h2", "font-semibold", "text-text-primary", "max-md:text-h4");
+        body.classList.add("text-body", "tracking-[0.03em]", "text-text-primary", "max-md:text-small");
 
         identifier.textContent = "leadership";
         header.textContent = "Our Leadership";
@@ -90,14 +90,13 @@ const Leadership = {
     createCards(cards) {
         const container = document.createElement("div");
         container.classList.add(
-            "grid",
-            "grid-cols-2",
-            "auto-rows-[230px]",
             "max-w-[1200px]",
             "mx-auto",
+            "grid",
+            "grid-cols-2",
             "gap-8",
             "my-0",
-            "max-xl:grid-cols-1"
+            "max-xl:grid-cols-1",
         );
 
         cards.map((card) => {
@@ -117,8 +116,10 @@ const Leadership = {
                 "rounded-2xl",
                 "shadow-md",
                 "px-8",
+                "p-4",
                 "min-w-0",
-                "h-full"
+                "h-full",
+                "max-md:flex-col"
             );
 
             div.classList.add(
@@ -136,14 +137,17 @@ const Leadership = {
                 "h-[120px]",
                 "shrink-0",
                 "rounded-full",
-                "shadow-md/40"
+                "shadow-md/40",
+                "max-md:w-[80px]",
+                "max-md:h-[80px]"
             );
 
             heading.textContent = card.name;
             heading.classList.add(
                 "text-h6",
                 "font-semibold",
-                "text-text-primary"
+                "text-text-primary",
+                "max-md:text-body"
             );
 
             title.textContent = card.title;
@@ -158,7 +162,8 @@ const Leadership = {
                 "text-text-primary",
                 "text-body",
                 "leading-relaxed",
-                "mb-2"
+                "mb-2",
+                "max-md:text-small"
             );
 
             if (card.button) {

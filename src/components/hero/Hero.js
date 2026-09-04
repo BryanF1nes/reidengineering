@@ -28,7 +28,8 @@ const Hero = {
 
         section.classList.add(
             "relative",
-            "min-h-[1000px]",
+            "min-h-[clamp(750px,75vh,900px)]",
+            "h-full",
             "flex",
             "items-center",
             "overflow-hidden"
@@ -127,13 +128,15 @@ const Hero = {
             "text-h1",
             "font-bold",
             "text-white",
-            "max-w-[450px]"
+            "max-w-[450px]",
+            "max-md:text-h3"
         );
 
         subHeader.classList.add(
             "text-body",
             "text-white",
-            "max-w-[400px]"
+            "max-w-[400px]",
+            "max-md:text-small"
         );
 
         cta.href = "/contact";
@@ -150,7 +153,8 @@ const Hero = {
             "shadow-lg",
             "shadow-primary-500/50",
             "hover:bg-primary-500",
-            "hover:text-white"
+            "hover:text-white",
+            "max-md:text-small"
         );
 
         container.append(
