@@ -9,6 +9,7 @@ const Projects = {
             description:
                 "Engineering services supporting wastewater infrastructure and treatment improvements for Caroline County.",
             image: Caroline,
+            route: "/caroline"
         },
         {
             title: "JBS USA",
@@ -16,6 +17,7 @@ const Projects = {
             description:
                 "Engineering and infrastructure services supporting the needs of JBS USA.",
             image: Jbs,
+            route: "/jbs"
         },
     ],
 
@@ -34,12 +36,39 @@ const Projects = {
         );
 
         section.append(
+            this.createTagLine(),
             this.createContent(this.projects)
         );
 
         container.appendChild(section);
 
         return section;
+    },
+
+    createTagLine() {
+        const container = document.createElement("div");
+        const identifier = document.createElement("p");
+        const header = document.createElement("h2");
+        const body = document.createElement("p");
+
+        container.classList.add(
+            "flex",
+            "flex-col",
+            "gap-2",
+            "w-[1200px]",
+            "mx-auto"
+        );
+        identifier.classList.add("text-small", "font-light", "text-text-primary");
+        header.classList.add("text-h2", "font-semibold", "text-text-primary", "max-md:text-h4");
+        body.classList.add("text-body", "tracking-[0.03em]", "text-text-primary", "max-md:text-small");
+
+        identifier.textContent = "projects";
+        header.textContent = "Our Projects";
+        body.textContent = "REC has been providing quality services to clients around the country, here are some of our projects.";
+
+        container.append(identifier, header, body);
+
+        return container;
     },
 
     createContent(projects) {
@@ -74,6 +103,8 @@ const Projects = {
         const location = document.createElement("p");
         const title = document.createElement("h3");
         const description = document.createElement("p");
+
+        const a = document.createElement("a");
 
         // Image
         image.src = project.image;
@@ -124,10 +155,30 @@ const Projects = {
             "max-w-xl"
         );
 
+        a.textContent = "Learn More";
+        a.href = project.route;
+        a.dataset.route = project.route;
+
+        a.classList.add(
+            "mt-auto",
+            "self-start",
+            "font-semibold",
+            "text-text-primary",
+            "border-2",
+            "border-primary-800",
+            "px-6",
+            "py-3",
+            "rounded-md",
+            "shadow-lg",
+            "max-md:text-small",
+            "flex-none"
+        );
+
         content.append(
             location,
             title,
-            description
+            description,
+            a
         );
 
         // Layout
@@ -137,7 +188,8 @@ const Projects = {
             "lg:grid-cols-2",
             "gap-8",
             "lg:gap-16",
-            "items-center"
+            "items-center",
+            "py-[32px]"
         );
 
         // Alternate image position

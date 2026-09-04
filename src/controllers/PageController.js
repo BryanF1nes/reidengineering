@@ -2,13 +2,15 @@ import Home from "../components/pages/Home";
 import About from "../components/pages/About";
 import Services from "../components/pages/Services";
 import Contact from "../components/pages/Contact";
+import NotFound from "../components/pages/NotFound";
 
 const PageController = {
     pages: {
         home: Home,
         about: About,
         services: Services,
-        contact: Contact
+        contact: Contact,
+        notFound: NotFound
     },
 
     render(page) {

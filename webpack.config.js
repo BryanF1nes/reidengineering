@@ -13,6 +13,7 @@ module.exports = {
     devServer: {
         port: 8000,
         watchFiles: ["./src/template.html"],
+        historyApiFallback: true,
     },
     plugins: [
         new HtmlWebpackPlugin({

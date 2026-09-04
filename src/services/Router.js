@@ -34,7 +34,7 @@ const Router = {
     },
 
     load(path) {
-        const page = this.routes[path] ?? "home";
+        const page = this.routes[path] ?? "notFound";
 
         PageController.render(page);
     },
