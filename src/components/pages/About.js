@@ -1,3 +1,4 @@
+import CallToAction from "../cta/CallToAction";
 import Footer from "../footer/Footer";
 
 const About = {
@@ -5,6 +6,7 @@ const About = {
 
     render(container) {
         container.append(
+            CallToAction.render(this.div),
             Footer.render(this.div)
         );
     },
