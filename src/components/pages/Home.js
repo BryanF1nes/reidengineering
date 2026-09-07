@@ -4,6 +4,7 @@ import Services from "../services/Services";
 import Numbers from "../numbers/Numbers";
 import Projects from "../projects/Projects";
 import CallToAction from "../cta/CallToAction";
+import Footer from "../footer/Footer";
 
 const Home = {
     div: document.createElement("div"),
@@ -15,7 +16,8 @@ const Home = {
             Leadership.render(this.div),
             Numbers.render(this.div),
             Projects.render(this.div),
-            CallToAction.render(this.div)
+            CallToAction.render(this.div),
+            Footer.render(this.div)
         );
     },
 };

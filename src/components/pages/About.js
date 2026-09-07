@@ -1,15 +1,12 @@
+import Footer from "../footer/Footer";
+
 const About = {
+    div: document.createElement("div"),
+
     render(container) {
-        const heading = document.createElement("h1");
-
-        heading.textContent = "About Reid Engineering";
-
-        heading.classList.add(
-            "text-4xl",
-            "font-semibold"
+        container.append(
+            Footer.render(this.div)
         );
-
-        container.appendChild(heading);
     },
 };
 

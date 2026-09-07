@@ -50,17 +50,18 @@ const Projects = {
         const identifier = document.createElement("p");
         const header = document.createElement("h2");
         const body = document.createElement("p");
-
         container.classList.add(
             "flex",
             "flex-col",
             "gap-2",
-            "w-[1200px]",
+            "w-full",
+            "max-w-[1200px]",
             "mx-auto"
         );
+
         identifier.classList.add("text-small", "font-light", "text-text-primary");
         header.classList.add("text-h2", "font-semibold", "text-text-primary", "max-md:text-h4");
-        body.classList.add("text-body", "tracking-[0.03em]", "text-text-primary", "max-md:text-small");
+        body.classList.add("text-body", "tracking-[0.03em]", "text-text-primary", "max-md:text-small", "max-w-xl");
 
         identifier.textContent = "projects";
         header.textContent = "Our Projects";

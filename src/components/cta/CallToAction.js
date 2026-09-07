@@ -9,8 +9,10 @@ const CallToAction = {
             "flex-col",
             "justify-between",
             "bg-card",
-            "p-[48px]",
-            "gap-[42px]"
+            "p-4",
+            "sm:p-8",
+            "lg:p-[96px]",
+            "gap-8"
         );
 
         section.append(
@@ -40,13 +42,26 @@ const CallToAction = {
             "flex",
             "flex-col",
             "gap-3",
-            "w-[1200px]",
-            "h-[400px]",
+
+            // Responsive width
+            "w-full",
+            "max-w-[1200px]",
+
+            // Responsive height
+            "min-h-[360px]",
+            "sm:min-h-[380px]",
+            "lg:h-[400px]",
+
             "mx-auto",
-            "p-4",
+
+            // Responsive padding
+            "p-6",
+            "sm:p-8",
+
             "items-center",
             "justify-center",
-            "rounded-4xl",
+            "rounded-3xl",
+            "sm:rounded-4xl",
             "text-white",
             "overflow-hidden",
             "shadow-xl/30"
@@ -67,19 +82,24 @@ const CallToAction = {
             "flex-col",
             "gap-3",
             "items-center",
-            "justify-center"
+            "justify-center",
+            "text-center",
+            "max-w-3xl"
         );
 
         header.textContent = "Ready to start your project?";
-        subheader.textContent = "Schedule a call with one of our engineers";
+        subheader.textContent =
+            "Schedule a call with one of our engineers";
 
         header.classList.add(
             "text-h2",
-            "font-semibold"
+            "font-semibold",
+            "max-md:text-xl"
         );
 
         subheader.classList.add(
             "text-body",
+            "max-md:text-sm"
         );
 
         a.href = "/contact";
@@ -90,14 +110,18 @@ const CallToAction = {
             "font-semibold",
             "bg-primary-600",
             "text-white",
-            "px-8",
-            "py-4",
+            "px-6",
+            "py-3",
+            "sm:px-8",
+            "sm:py-4",
             "rounded-md",
             "shadow-lg",
             "shadow-primary-500/50",
             "hover:bg-primary-500",
             "hover:text-white",
-            "max-md:text-small"
+            "text-sm",
+            "sm:text-base",
+            "text-center"
         );
 
         content.append(header, subheader, a);
@@ -105,6 +129,6 @@ const CallToAction = {
 
         return container;
     }
-}
+};
 
 export default CallToAction;
