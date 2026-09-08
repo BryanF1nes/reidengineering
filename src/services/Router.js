@@ -6,6 +6,10 @@ const Router = {
         "/about": "about",
         "/services": "services",
         "/contact": "contact",
+        "/leadership/john": "john",
+        "/leadership/shane": "shane",
+        "/leadership/wade": "wade",
+        "/leadership/adam": "adam"
     },
 
     init() {
@@ -37,6 +41,11 @@ const Router = {
         const page = this.routes[path] ?? "notFound";
 
         PageController.render(page);
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     },
 };
 

@@ -55,7 +55,7 @@ const Banner = {
             "max-md:text-h4"
         );
 
-        body.classList.add("max-w-[500px]");
+        body.classList.add("max-w-2/3");
 
         container.append(title, body);
 

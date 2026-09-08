@@ -3,6 +3,7 @@ import About from "../components/pages/About";
 import Services from "../components/pages/Services";
 import Contact from "../components/pages/Contact";
 import NotFound from "../components/pages/NotFound";
+import { John, Shane, Wade, Adam } from "../components/pages/Leadership";
 
 const PageController = {
     pages: {
@@ -10,7 +11,11 @@ const PageController = {
         about: About,
         services: Services,
         contact: Contact,
-        notFound: NotFound
+        notFound: NotFound,
+        john: John,
+        shane: Shane,
+        wade: Wade,
+        adam: Adam,
     },
 
     render(page) {
