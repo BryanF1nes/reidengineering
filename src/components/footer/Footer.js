@@ -144,7 +144,8 @@ const Footer = {
             "sm:gap-12",
             "lg:gap-[72px]",
             "w-full",
-            "md:w-auto"
+            "md:w-auto",
+            "max-lg:grid-cols-1"
         );
 
         return container;
@@ -250,7 +251,6 @@ const Footer = {
         [email, phone, address].forEach((element) => {
             element.classList.add(
                 "text-body",
-                "whitespace-pre-line"
             );
         });
 

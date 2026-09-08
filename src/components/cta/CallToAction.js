@@ -48,7 +48,7 @@ const CallToAction = {
             "max-w-[1200px]",
 
             // Responsive height
-            "min-h-[360px]",
+            "min-h-[200px]",
             "sm:min-h-[380px]",
             "lg:h-[400px]",
 

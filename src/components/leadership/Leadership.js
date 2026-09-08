@@ -11,7 +11,7 @@ const Leadership = {
             title: "President",
             bio: "Mr. John Reid, P.E. is the Founder and President of Reid Engineering Co. with over 45 years of wastewater engineering experience.",
             button: true,
-            route: '/'
+            route: '/leadership/john'
         },
         {
             img: Shane,
@@ -19,7 +19,7 @@ const Leadership = {
             title: "Vice President",
             bio: "Mr. Shane Reid, P.E. is the Vice President of Operations and is responsible for the day to day business operations and leadership of the firm.",
             button: true,
-            route: '/'
+            route: '/leadership/shane'
         },
         {
             img: Wade,
@@ -27,7 +27,7 @@ const Leadership = {
             title: "Engineering Director",
             bio: "Mr. Tanner, P.E. is the Director of Engineering and provides leadership and oversight on all projects at the firm with over 20 years of experience.",
             button: true,
-            route: '/'
+            route: '/leadership/wade'
         },
         {
             img: Adam,
@@ -35,7 +35,7 @@ const Leadership = {
             title: "Senior Project Manager",
             bio: "Mr. Zimmerman, P.E. is a Sr. Project Manager on many of the firms most challenging and complicated projects. Adam has over 12 years of experience.",
             button: true,
-            route: '/'
+            route: '/leadership/adam'
         },
     ],
 
@@ -49,6 +49,7 @@ const Leadership = {
             "bg-bg",
             "p-[96px]",
             "gap-[42px]",
+            "max-md:p-[24px]"
         );
 
         section.append(

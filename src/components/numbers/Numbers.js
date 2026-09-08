@@ -30,7 +30,8 @@ const Numbers = {
             "bg-card",
             "p-[96px]",
             "gap-[42px]",
-            "text-white"
+            "text-white",
+            "max-md:p-[24px]"
         );
 
         section.append(
