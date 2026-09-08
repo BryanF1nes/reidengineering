@@ -1,5 +1,6 @@
 import Banner from "../banner/Banner";
 import Footer from "../footer/Footer";
+import Team from "../team/Team";
 
 const leadership = {
     john: {
