@@ -30,7 +30,7 @@ const AboutDiv = {
 
         img.src = John;
         img.alt = "John H. Reid, P.E";
-        img.classList.add("w-1/2", "rounded-2xl", "shadow-md/30", "mt-6")
+        img.classList.add("w-1/2", "rounded-2xl", "shadow-md/30", "mt-6", "max-md:w-[200px]")
 
         container.classList.add(
             "flex",

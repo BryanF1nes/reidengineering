@@ -1,5 +1,5 @@
 import Banner from "../banner/Banner";
-import CallToAction from "../cta/CallToAction";
+import { CallToAction } from "../cta/CallToAction";
 import Footer from "../footer/Footer";
 import AboutDiv from "../about/About";
 import Mission from "../mission/Mission";

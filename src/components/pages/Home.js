@@ -3,7 +3,7 @@ import Leadership from "../leadership/Leadership";
 import Services from "../services/Services";
 import Numbers from "../numbers/Numbers";
 import Projects from "../projects/Projects";
-import CallToAction from "../cta/CallToAction";
+import { CallToAction } from "../cta/CallToAction";
 import Footer from "../footer/Footer";
 
 const Home = {

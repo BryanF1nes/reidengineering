@@ -32,7 +32,7 @@ const Banner = {
             "flex-col",
             "justify-center",
             "text-white",
-            "max-md:p-2"
+            "max-xl:p-6"
         );
 
         section.append(overlay, content);

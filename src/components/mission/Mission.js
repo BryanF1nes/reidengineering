@@ -13,7 +13,7 @@ const Mission = {
             "p-[96px]",
             "gap-[42px]",
             "text-white",
-            "max-md:p-[24px]"
+            "max-md:p-[24px]",
         );
 
         section.append(
@@ -60,13 +60,15 @@ const Mission = {
             "w-full",
             "h-full",
             "object-cover",
+            "max-md:hidden"
         );
 
         imageContainer.classList.add(
             "w-full",
             "h-[400px]",
             "overflow-hidden",
-            "rounded-lg"
+            "rounded-lg",
+            "max-md:hidden"
         );
 
         imageContainer.appendChild(image);
@@ -74,7 +76,7 @@ const Mission = {
         title.textContent = "Our Mission";
         description.textContent = "We have built our core business around serving clients across the nation and around the world from one central strategic office located in close proximity to four airports just outside of Washington D.C. allowing our staff to be responsive to our client’s needs at a moments notice. Our engineering staff are licensed in over forty states which allows clients to rely on our expertise to guide them through the entire project life-cycle regardless of project location. This strategic business model allows us to stay laser focused on our core services and markets while eliminating the headache, bureaucracy and high overhead costs of operating multiple offices ultimately adding tremendous value to our clients. You can count us. We have your back!";
 
-        content.classList.add("max-w-1/2");
+        content.classList.add("lg:max-w-1/2", "max-md:w-full");
 
         title.classList.add(
             "text-h3",
@@ -96,7 +98,8 @@ const Mission = {
             "gap-8",
             "lg:gap-16",
             "items-center",
-            "py-[32px]"
+            "py-[32px]",
+            "max-md:flex-col"
         );
 
         article.append(

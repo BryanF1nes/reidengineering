@@ -29,7 +29,7 @@ const Message = {
         const message = document.createElement("p");
 
         container.classList.add("flex", "flex-col", "items-center", "justify-center", "gap-2", "mx-auto", "max-w-[1200px]", "p-8");
-        title.classList.add("text-h1", "font-bold", "text-text-primary");
+        title.classList.add("text-h1", "font-bold", "text-text-primary", "max-md:text-h3");
         message.classList.add("text-body", "font-regular", "text-text-primary", "text-center", "tracking-[0.03em]");
 
         title.textContent = "From The President";
