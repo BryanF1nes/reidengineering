@@ -1,6 +1,9 @@
 import Banner from "../banner/Banner";
 import CallToAction from "../cta/CallToAction";
 import Footer from "../footer/Footer";
+import AboutDiv from "../about/About";
+import Mission from "../mission/Mission";
+import Message from "../message/Message";
 
 const aboutUs = {
     title: "About Reid Engineering",
@@ -13,6 +16,9 @@ const About = {
     render(container) {
         container.append(
             Banner.render(this.div, aboutUs.title, aboutUs.body),
+            AboutDiv.render(this.div),
+            Mission.render(this.div),
+            Message.render(this.div),
             CallToAction.render(this.div),
             Footer.render(this.div)
         );

@@ -9,7 +9,7 @@ const Form = {
 
         section.classList.add(
             "w-full",
-            "py-[72px]",
+            "py-[96px]",
             "max-md:p-2"
         );
 
@@ -42,9 +42,9 @@ const Form = {
             "gap-4",
             "w-1/2",
             "bg-card",
-            "p-4",
+            "p-6",
             "rounded-lg",
-            "shadow-md",
+            "shadow-md/20",
             "max-lg:w-full"
         );
 
@@ -126,7 +126,7 @@ const Form = {
             "text-white",
             "rounded-lg",
             "p-[28px]",
-            "shadow-xl"
+            "shadow-lg/20"
         );
 
         card.append(
@@ -222,22 +222,19 @@ const Form = {
         );
 
         label.classList.add(
-            "text-small",
             "font-semibold"
         );
 
         input.classList.add(
             "w-full",
-            "h-[40px]",
-            "px-3",
+            "p-3",
             "border",
             "border-gray-300",
             "rounded-md",
             "bg-white",
-            "text-small",
             "focus:outline-none",
             "focus:ring-2",
-            "focus:ring-primary-700"
+            "focus:ring-primary-500"
         );
 
         field.append(label, input);
@@ -251,7 +248,7 @@ const Form = {
         const textarea = document.createElement("textarea");
 
         label.textContent =
-            "Tell us about your specific needs or project";
+            "Tell us more about your project or needs";
 
         label.htmlFor = "message";
 
@@ -267,7 +264,6 @@ const Form = {
         );
 
         label.classList.add(
-            "text-small",
             "font-semibold"
         );
 
@@ -279,11 +275,10 @@ const Form = {
             "border-gray-300",
             "rounded-md",
             "bg-white",
-            "text-small",
             "resize-none",
             "focus:outline-none",
             "focus:ring-2",
-            "focus:ring-primary-700"
+            "focus:ring-primary-500"
         );
 
         field.append(label, textarea);
@@ -299,15 +294,17 @@ const Form = {
 
         button.classList.add(
             "w-full",
-            "h-[42px]",
-            "bg-primary-700",
+            "p-3",
+            "bg-linear-to-b",
+            "from-primary-500",
+            "to-primary-600",
             "text-white",
-            "text-small",
             "font-semibold",
             "rounded-md",
             "cursor-pointer",
             "hover:bg-primary-800",
-            "transition-colors"
+            "transition-colors",
+            "shadow-md/20"
         );
 
         return button;

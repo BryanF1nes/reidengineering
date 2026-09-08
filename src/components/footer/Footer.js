@@ -184,6 +184,10 @@ const Footer = {
             {
                 label: "Contact Us",
                 href: "/contact"
+            },
+            {
+                label: "Careers",
+                href: "/careers"
             }
         ];
 
