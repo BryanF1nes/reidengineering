@@ -5,6 +5,7 @@ import Contact from "../components/pages/Contact";
 import NotFound from "../components/pages/NotFound";
 import LeaderShip from "../components/pages/Leadership";
 import Projects from "../components/pages/Projects";
+import Careers from "../components/pages/Careers";
 
 const PageController = {
     pages: {
@@ -14,8 +15,8 @@ const PageController = {
         contact: Contact,
         notFound: NotFound,
         leadership: LeaderShip,
-        projects: Projects
-
+        projects: Projects,
+        careers: Careers
     },
 
     render(page, slug = null) {

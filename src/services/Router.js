@@ -6,6 +6,7 @@ const Router = {
         "/about": "about",
         "/services": "services",
         "/contact": "contact",
+        "/careers": "careers",
     },
 
     init() {
