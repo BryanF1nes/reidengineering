@@ -120,7 +120,8 @@ const Leadership = {
                 "p-4",
                 "min-w-0",
                 "h-full",
-                "max-md:flex-col"
+                "max-md:flex-col",
+                "max-md:items-start",
             );
 
             div.classList.add(

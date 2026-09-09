@@ -22,15 +22,44 @@ const Team = {
 
         return section;
     },
-
     createContent(team) {
         const container = document.createElement("div");
         const image = document.createElement("img");
         const body = document.createElement("p");
 
-        container.classList.add("flex", "justify-between", "mx-auto", "gap-8", "text-text-primary");
-        image.classList.add("w-auto", "h-[700px]", "shadow-md/20");
-        body.classList.add("text-body", "whitespace-pre-line");
+        container.classList.add(
+            "flex",
+            "items-start",
+            "justify-between",
+            "mx-auto",
+            "gap-12",
+            "w-full",
+            "max-w-[1200px]",
+            "text-text-primary",
+            "max-lg:flex-col",
+            "max-lg:gap-8",
+            "max-lg:p-4",
+            "max-lg:justify-center"
+        );
+
+        image.classList.add(
+            "w-auto",
+            "h-[700px]",
+            "shadow-md/20",
+            "max-md:w-full",
+            "max-md:h-auto",
+            "max-md:max-h-[500px]",
+            "max-md:mx-auto",
+        );
+
+        body.classList.add(
+            "text-body",
+            "whitespace-pre-line",
+            "leading-relaxed",
+            "flex-1",
+            "max-w-2xl",
+            "max-lg:max-w-none",
+        );
 
         image.src = team.image;
         image.alt = team.name;
@@ -38,6 +67,7 @@ const Team = {
         body.textContent = team.text;
 
         container.append(image, body);
+
         return container;
     },
 }
