@@ -52,27 +52,32 @@ const Form = {
             this.createField(
                 "Name",
                 "name",
-                "Enter your name here"
+                "Enter your name here",
+                true
             ),
             this.createField(
                 "Title",
                 "title",
-                "Enter your title here"
+                "Enter your title here",
+                true
             ),
             this.createField(
                 "Company",
                 "company",
-                "Enter your company name here"
+                "Enter your company name here",
+                true
             ),
             this.createField(
                 "Location",
                 "location",
-                "Enter your location here"
+                "Enter your location here",
+                true
             ),
             this.createField(
                 "Email",
                 "email",
-                "Enter your email here"
+                "Enter your email here",
+                true
             ),
             this.createMessageField(),
             this.createSubmitButton()
@@ -202,18 +207,28 @@ const Form = {
         return content;
     },
 
-    createField(labelText, name, placeholder) {
+    createField(labelText, name, placeholder, required = false) {
         const field = document.createElement("div");
         const label = document.createElement("label");
         const input = document.createElement("input");
+        const asterik = document.createElement("span");
 
-        label.textContent = labelText;
+        asterik.classList.add("text-red-500");
+        asterik.textContent = "*";
+
+        label.textContent = labelText + " ";
+        if (required) {
+            input.required = true;
+            label.append(asterik);
+        }
+
         label.htmlFor = name;
 
         input.id = name;
         input.name = name;
         input.type = name === "email" ? "email" : "text";
         input.placeholder = placeholder;
+
 
         field.classList.add(
             "flex",
