@@ -3,7 +3,8 @@ import About from "../components/pages/About";
 import Services from "../components/pages/Services";
 import Contact from "../components/pages/Contact";
 import NotFound from "../components/pages/NotFound";
-import { John, Shane, Wade, Adam } from "../components/pages/Leadership";
+import LeaderShip from "../components/pages/Leadership";
+import Projects from "../components/pages/Projects";
 
 const PageController = {
     pages: {
@@ -12,13 +13,12 @@ const PageController = {
         services: Services,
         contact: Contact,
         notFound: NotFound,
-        john: John,
-        shane: Shane,
-        wade: Wade,
-        adam: Adam,
+        leadership: LeaderShip,
+        projects: Projects
+
     },
 
-    render(page) {
+    render(page, slug = null) {
         const container = document.querySelector("#content");
 
         if (!container) {
@@ -33,7 +33,7 @@ const PageController = {
             throw new Error(`Page "${page}" not found.`);
         }
 
-        component.render(container);
+        component.render(container, slug);
     },
 };
 

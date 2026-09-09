@@ -1,12 +1,12 @@
 import Caroline from "../../../assets/main/projects/caroline_000_6742.jpg";
 
 const Banner = {
-    render(container, header, info) {
+    render(container, header, info, image = Caroline) {
         const section = document.createElement("section");
         const overlay = document.createElement("div");
         const content = this.createBanner(header, info);
 
-        section.style.backgroundImage = `url(${Caroline})`;
+        section.style.backgroundImage = `url(${image})`;
 
         section.classList.add(
             "relative",

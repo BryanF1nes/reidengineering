@@ -6,10 +6,6 @@ const Router = {
         "/about": "about",
         "/services": "services",
         "/contact": "contact",
-        "/leadership/john": "john",
-        "/leadership/shane": "shane",
-        "/leadership/wade": "wade",
-        "/leadership/adam": "adam"
     },
 
     init() {
@@ -38,13 +34,25 @@ const Router = {
     },
 
     load(path) {
-        const page = this.routes[path] ?? "notFound";
+        if (path.startsWith("/leadership/")) {
+            const slug = path.split("/")[2];
+            console.log(slug);
 
-        PageController.render(page);
+            PageController.render("leadership", slug);
+        } else if (path.startsWith("/projects/")) {
+            const slug = path.split("/")[2];
+            console.log(slug);
+
+            PageController.render("projects", slug);
+        } else {
+            const page = this.routes[path] ?? "notFound";
+
+            PageController.render(page);
+        }
 
         window.scrollTo({
             top: 0,
-            behavior: "smooth"
+            behavior: "smooth",
         });
     },
 };
