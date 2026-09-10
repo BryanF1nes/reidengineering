@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "npx webpack serve",
-    "build": "npx webpack",
+    "dev": "npx webpack serve --config webpack.dev.js",
+    "build": "npx webpack --config webpack.prod.js",
     "pretty": "npx prettier . --write",
     "test": "jest",
     "watch": "jest --watch"

@@ -23,26 +23,40 @@ const Router = {
         });
 
         window.addEventListener("popstate", () => {
-            this.load(window.location.pathname);
+            this.load(this.getRoute());
         });
 
-        this.load(window.location.pathname);
+        this.load(this.getRoute());
+    },
+
+    getRoute() {
+        let path = window.location.pathname;
+
+        if (BASE_PATH !== "/" && path.startsWith(BASE_PATH)) {
+            path = path.slice(BASE_PATH.length - 1);
+        }
+
+        return path || "/";
     },
 
     navigate(path) {
-        window.history.pushState({}, "", path);
+        const url =
+            BASE_PATH === "/"
+                ? path
+                : `${BASE_PATH}${path.replace(/^\//, "")}`;
+
+        window.history.pushState({}, "", url);
+
         this.load(path);
     },
 
     load(path) {
         if (path.startsWith("/leadership/")) {
             const slug = path.split("/")[2];
-            console.log(slug);
 
             PageController.render("leadership", slug);
         } else if (path.startsWith("/projects/")) {
             const slug = path.split("/")[2];
-            console.log(slug);
 
             PageController.render("projects", slug);
         } else {

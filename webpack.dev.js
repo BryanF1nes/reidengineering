@@ -1,26 +1,38 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+const BASE_PATH = "/";
 
 module.exports = {
     mode: "development",
+
     entry: "./src/index.js",
+
     output: {
         filename: "main.js",
         path: path.resolve(__dirname, "dist"),
-        publicPath: "/",
+        publicPath: BASE_PATH,
         clean: true,
     },
+
     devtool: "eval-source-map",
+
     devServer: {
         port: 8000,
-        watchFiles: ["./src/template.html"],
         historyApiFallback: true,
     },
+
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/template.html",
         }),
+
+        new webpack.DefinePlugin({
+            BASE_PATH: JSON.stringify(BASE_PATH),
+        }),
     ],
+
     module: {
         rules: [
             {
@@ -34,7 +46,7 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
-            }
+            },
         ],
     },
 };
