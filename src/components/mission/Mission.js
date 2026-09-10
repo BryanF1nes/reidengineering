@@ -60,7 +60,6 @@ const Mission = {
             "w-full",
             "h-full",
             "object-cover",
-            "max-md:hidden"
         );
 
         imageContainer.classList.add(
@@ -68,7 +67,6 @@ const Mission = {
             "h-[400px]",
             "overflow-hidden",
             "rounded-lg",
-            "max-md:hidden"
         );
 
         imageContainer.appendChild(image);
@@ -99,7 +97,7 @@ const Mission = {
             "lg:gap-16",
             "items-center",
             "py-[32px]",
-            "max-md:flex-col"
+            "max-lg:flex-col"
         );
 
         article.append(

@@ -59,9 +59,9 @@ const ServicesPage = {
             "mx-auto",
             "gap-4",
             "my-8",
-            "justify-items-center",
-            "max-md:grid-cols-1",
-            "max-lg:grid-cols-2"
+            "items-stretch",
+            "max-lg:grid-cols-2",
+            "max-md:grid-cols-1"
         );
 
         cards.map((card) => {
@@ -72,26 +72,26 @@ const ServicesPage = {
             const itemsContainer = document.createElement("ul");
 
             cardContainer.classList.add(
-                "bg-card",
+                "bg-white",
                 "flex",
                 "flex-col",
                 "items-center",
-                "justify-center",
                 "rounded-lg",
                 "px-10",
                 "py-8",
                 "gap-2",
-                "mb-[24px]",
-                "max-md:px-6",
                 "shadow-md/20",
                 "w-full",
-                "max-w-[380px]"
+                "h-full",
+                "max-w-[380px]",
+                "max-md:px-6"
             );
 
             img.src = card.icon;
             img.classList.add(
                 "w-[50px]",
-                "h-[50px]"
+                "h-[50px]",
+                "shrink-0"
             );
 
             heading.textContent = card.title;
@@ -149,6 +149,13 @@ const ServicesPage = {
                 itemsContainer.append(listItem);
             });
 
+            cardContainer.append(
+                img,
+                heading,
+                body,
+                itemsContainer
+            );
+
             if (card.optional) {
                 const optional = document.createElement("p");
 
@@ -165,18 +172,12 @@ const ServicesPage = {
                 cardContainer.append(optional);
             }
 
-            cardContainer.prepend(
-                img,
-                heading,
-                body,
-                itemsContainer
-            );
-
             container.append(cardContainer);
         });
 
         return container;
     },
+
 }
 
 export default ServicesPage;

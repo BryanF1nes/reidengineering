@@ -10,6 +10,7 @@ const AboutDiv = {
             "justify-center",
             "bg-card",
             "p-[96px]",
+            "max-md:p-[24px]"
         );
 
         section.append(

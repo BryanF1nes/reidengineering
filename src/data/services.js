@@ -1,6 +1,8 @@
-import cog from "../../assets/main/vaadin_cog-o.svg";
-import ph from "../../assets/main/material-symbols_water-ph-outline.svg";
-import design from "../../assets/main/streamline-ultimate_blueprint-helmet-1.svg";
+import cog from "../../assets/main/svgs/cog.svg";
+import ph from "../../assets/main/svgs/ph.svg";
+import design from "../../assets/main/svgs/design-build.svg";
+import reuse from "../../assets/main/svgs/reuse.svg";
+import sewer from "../../assets/main/svgs/sewer.svg";
 
 const services = [
     {
@@ -31,7 +33,7 @@ const services = [
     },
     {
         title: "Water Reuse Systems",
-        icon: ph,
+        icon: reuse,
         description: "While wastewater is our core niche and focus on other systems.",
         items: [
             "Process Design",
@@ -44,7 +46,7 @@ const services = [
     },
     {
         title: "Sewer Infrastructure",
-        icon: ph,
+        icon: sewer,
         description: "We can analyze your current system and identifiy opportunities for upgrades and improvements.",
         items: [
             "Systems wide planning",

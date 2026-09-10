@@ -1,6 +1,6 @@
-import cog from "../../../assets/main/vaadin_cog-o.svg";
-import ph from "../../../assets/main/material-symbols_water-ph-outline.svg";
-import design from "../../../assets/main/streamline-ultimate_blueprint-helmet-1.svg";
+import cog from "../../../assets/main/svgs/cog.svg";
+import ph from "../../../assets/main/svgs/ph.svg";
+import design from "../../../assets/main/svgs/design-build.svg";
 
 const Services = {
     cards: [
