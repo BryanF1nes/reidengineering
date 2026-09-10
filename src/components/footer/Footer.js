@@ -171,31 +171,31 @@ const Footer = {
         const links = [
             {
                 label: "Home",
-                href: "/"
+                route: "/"
             },
             {
                 label: "About Us",
-                href: "/about"
+                route: "/about"
             },
             {
                 label: "Services",
-                href: "/services"
+                route: "/services"
             },
             {
                 label: "Contact Us",
-                href: "/contact"
+                route: "/contact"
             },
             {
                 label: "Careers",
-                href: "/careers"
+                route: "/careers"
             }
         ];
 
-        links.forEach(({ label, href }) => {
+        links.forEach(({ label, route }) => {
             const link = document.createElement("a");
 
             link.textContent = label;
-            link.href = href;
+            link.dataset.route = route;
 
             link.classList.add(
                 "text-body",
