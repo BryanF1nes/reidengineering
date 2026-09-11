@@ -1,5 +1,6 @@
 import Banner from "../banner/Banner";
 import Footer from "../footer/Footer";
+import Project from "../projects/Project";
 import projects from "../../data/projects";
 
 const Projects = {
@@ -16,11 +17,11 @@ const Projects = {
         container.append(
             Banner.render(
                 div,
-                project.name,
-                `${project.name} is located in ${project.location}`,
+                `${project.name}, ${project.location}`,
+                project.system,
                 project.image
             ),
-            //Project.render(div, projects),
+            Project.render(div, project),
             Footer.render(div),
         );
     }

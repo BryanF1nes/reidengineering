@@ -1,34 +1,6 @@
-import Caroline from "../../../assets/main/projects/caroline_000_6742.jpg";
-import Jbs from "../../../assets/main/projects/jbsusa-100_0049.jpg";
-import FosterFarms from "../../../assets/main/projects/fosterfarms-img_9854.jpg";
+import projects from "../../data/projects";
 
 const Projects = {
-    projects: [
-        {
-            title: "Caroline County",
-            location: "Caroline County, Virginia",
-            description: "We were the Prime Engineer for the Design Build Wastewater Treatment Upgrade and Expansion Project for Caroline County Polecat Creek Regional WWTP through the Unsolicited PPEA (Public Private Partnership) process. The existing wastewater treatment plant was expanded form 0.5 MGD to 1.5 MGD and upgraded to provide Enhanced Nutrient Removal effluent limits of Total Nitrogen = 3.0 gm/l and Total Phosphorus = 0.3 mg/l. We utilize design practices that significantly reduced cost for the rural Virginia community.",
-            image: Caroline,
-            route: "/projects/caroline"
-        },
-        {
-            title: "JBS USA",
-            location: "United States",
-            description:
-                "We were the Prime Engineer that was selected to design a new Single Stage Activated Sludge Pretreatment System that reduced BOD, TSS and Total Nitrogen prior to discharge to the City POTW.",
-            image: Jbs,
-            route: "/projects/jbs"
-        },
-        {
-            title: "Foster Farms, CA",
-            location: "United States",
-            description:
-                "Foster Farms owns and operates the world’s largest chicken processing plant in Livingston, California. After several years of negotiations with the City of Livingston regarding sewer rates, Foster Farms elected to design and build their own Wastewater Treatment System. We were selected as the Prime Engineer and designed a Four-Stage Bardenpho Biological Nutrient Removal System to reduce Total Nitrogen to less than 10 mg/l.",
-            image: FosterFarms,
-            route: "/projects/foster-farms"
-        },
-    ],
-
     render(container) {
         const section = document.createElement("section");
 
@@ -46,7 +18,7 @@ const Projects = {
 
         section.append(
             this.createTagLine(),
-            this.createContent(this.projects)
+            this.createContent(projects)
         );
 
         container.appendChild(section);
@@ -94,11 +66,12 @@ const Projects = {
             "mx-auto"
         );
 
-        projects.forEach((project, index) => {
+        Object.entries(projects).forEach(([slug, project], index) => {
             container.appendChild(
                 this.createProject(project, index)
             );
         });
+
 
         return container;
     },
@@ -118,7 +91,7 @@ const Projects = {
 
         // Image
         image.src = project.image;
-        image.alt = project.title;
+        image.alt = project.name;
 
         image.classList.add(
             "w-full",
@@ -140,8 +113,8 @@ const Projects = {
 
         // Content
         location.textContent = project.location;
-        title.textContent = project.title;
-        description.textContent = project.description;
+        title.textContent = project.name;
+        description.textContent = project.text;
 
         content.classList.add(
             "flex",
@@ -166,8 +139,7 @@ const Projects = {
         );
 
         a.textContent = "Learn More";
-        a.href = project.route;
-        a.dataset.route = project.route;
+        a.dataset.route = `/projects/${project.route}`;
 
         a.classList.add(
             "mt-auto",
@@ -181,7 +153,8 @@ const Projects = {
             "rounded-md",
             "shadow-lg",
             "max-md:text-small",
-            "flex-none"
+            "flex-none",
+            "cursor-pointer"
         );
 
         content.append(

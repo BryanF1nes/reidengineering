@@ -41,13 +41,13 @@ const Banner = {
         return section;
     },
 
-    createBanner(header, info) {
+    createBanner(header, system) {
         const container = document.createElement("div");
         const title = document.createElement("h3");
         const body = document.createElement("p");
 
         title.textContent = header;
-        body.textContent = info;
+        body.textContent = system;
 
         title.classList.add(
             "text-h3",
@@ -55,7 +55,7 @@ const Banner = {
             "max-md:text-h4"
         );
 
-        body.classList.add("max-w-2/3");
+        body.classList.add("max-w-2/3", "text-body");
 
         container.append(title, body);
 

@@ -201,7 +201,8 @@ const Footer = {
                 "text-body",
                 "block",
                 "hover:text-primary-300",
-                "transition-colors"
+                "transition-colors",
+                "cursor-pointer"
             );
 
             nav.appendChild(link);

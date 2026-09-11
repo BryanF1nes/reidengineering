@@ -6,7 +6,8 @@ const projects = {
     caroline: {
         location: "Caroline County, Virginia",
         name: "Caroline County",
-        text: "We were the Prime Engineer for the Design Build Wastewater Treatment Upgrade and Expansion Project for Caroline County Polecat Creek Regional WWTP through the Unsolicited PPEA (Public Private Partnership) process. The existing wastewater treatment plant was expanded form 0.5 MGD to 1.5 MGD and upgraded to provide Enhanced Nutrient Removal effluent limits of Total Nitrogen = 3.0 gm/l and Total Phosphorus = 0.3 mg/l. We utilize design practices that significantly reduced cost for the rural Virginia community. The new 5 Stage (Enhanced Nutrient Removal) Bardenpho Parkson EquaReact system integrated equalization and first stage treatment which eliminated the need for a costly standalone equalization tank and pumping system that would only be used during peak flow events. This unique and cost effective system not only saved the County millions of dollars it also allowed equalization to be an integral part of the treatment system reducing downstream reactor sizing, ability to treat higher flows, reduce chemical costs and streamline operations on a daily basis.",
+        system: "New 1.5 MGD 5 Stage Biological Nutrient Removal WWTP",
+        text: "We were the Prime Engineer for the Design Build Wastewater Treatment Upgrade and Expansion Project for Caroline County Polecat Creek Regional WWTP through the Unsolicited PPEA (Public Private Partnership) process. The existing wastewater treatment plant was expanded form 4.5 MGD to 1.5 MGD and upgraded to provide Enhanced Nutrient Removal effluent limits of Total Nitrogen = 3.0 gm/l and Total Phosphorus = 0.3 mg/l. We utilize design practices that significantly reduced cost for the rural Virginia community.",
         image: Caroline,
         accomplishment: "We, along with the Design Build Team, saved the County over 10+ million dollars based on a previous design and estimate by others. The County could not afford the project and after it was denied stimulus funds decided to entertain our Value Engineered Design through the Public Private Design Build approach.",
         components: [
@@ -23,11 +24,13 @@ const projects = {
             "Electrical and Genset",
             "Automation and Controls/SCADA",
             "Benefical Reuse"
-        ]
+        ],
+        route: "caroline"
     },
     jbs: {
         location: "Marshalltown, Indiana",
         name: "JBS USA",
+        system: "New 1.8 MGD Wastewater Pretreatment System",
         text: "We were the Prime Engineer that was selected to design a new Single Stage Activated Sludge Pretreatment System that reduced BOD, TSS and Total Nitrogen prior to discharge to the City POTW.",
         image: Jbs,
         accomplishment: "",
@@ -39,11 +42,13 @@ const projects = {
             "Chemical Feed Systems",
             "New Wastewater Equipment Building for the enclosure of the Jet Pumps, Air Supply Blowers, RAS and WAS Pump Stations, Chemical Storage and Feed Equipment, electrical room and new lab/office",
             "Belt Filter Press Sludge Dewatering System"
-        ]
+        ],
+        route: "jbs"
     },
     "foster-farms": {
         location: "Livingston, California",
         name: "Foster Farms",
+        system: "New 5.0 MGD 4 Stage Biological Nutrient Removal Wastewater Treatment System",
         text: "Foster Farms owns and operates the world’s largest chicken processing plant in Livingston, California. After several years of negotiations with the City of Livingston regarding sewer rates, Foster Farms elected to design and build their own Wastewater Treatment System. We were selected as the Prime Engineer and designed a Four-Stage Bardenpho Biological Nutrient Removal System to reduce Total Nitrogen to less than 10 mg/l.",
         image: Foster,
         accomplishment: "Our design saved Foster Farms over 14+ million dollars based on a previous design and estimate by others.",
@@ -58,7 +63,8 @@ const projects = {
             "Final Effluent Storage Pond for ground water recharge",
             "Double Lined Waste Sludge Storage Lagoon",
             "Automation and Controls",
-        ]
+        ],
+        route: "foster-farms"
     },
 };
 
