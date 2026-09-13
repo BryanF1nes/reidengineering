@@ -44,9 +44,9 @@ const Projects = {
         header.classList.add("text-h2", "font-semibold", "text-text-primary", "max-md:text-h4");
         body.classList.add("text-body", "tracking-[0.03em]", "text-text-primary", "max-md:text-small");
 
-        identifier.textContent = "projects";
-        header.textContent = "Our Projects";
-        body.textContent = "REC has been providing quality services to clients around the country, here are some of our projects.";
+        identifier.textContent = "highlights";
+        header.textContent = "Our Highlights";
+        body.textContent = "REC has been providing quality services to clients around the country, here are some of our projects we would like to highlight.";
 
         container.append(identifier, header, body);
 

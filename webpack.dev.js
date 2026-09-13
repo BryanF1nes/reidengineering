@@ -1,7 +1,9 @@
 const path = require("path");
 const webpack = require("webpack");
+const dotenv = require("dotenv");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+const env = dotenv.config().parsed || {};
 const BASE_PATH = "/";
 
 module.exports = {
@@ -30,6 +32,12 @@ module.exports = {
 
         new webpack.DefinePlugin({
             BASE_PATH: JSON.stringify(BASE_PATH),
+        }),
+
+        new webpack.DefinePlugin({
+            "process.env.GOOGLE_MAPS_API_KEY": JSON.stringify(
+                env.GOOGLE_MAPS_API_KEY
+            ),
         }),
     ],
 
