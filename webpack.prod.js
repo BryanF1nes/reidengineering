@@ -31,6 +31,12 @@ module.exports = {
         new webpack.DefinePlugin({
             BASE_PATH: JSON.stringify(BASE_PATH),
         }),
+
+        new webpack.DefinePlugin({
+            "process.env.GOOGLE_MAPS_API_KEY": JSON.stringify(
+                process.env.GOOGLE_MAPS_API_KEY
+            ),
+        }),
     ],
 
     module: {
