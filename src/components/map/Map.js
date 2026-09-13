@@ -9,6 +9,8 @@ const Map = {
 
     defaultZoom: 4,
 
+    defaultMapTypeId: "roadmap",
+
     render(container) {
         const section = document.createElement("section");
 
@@ -48,13 +50,6 @@ const Map = {
         );
 
         return section;
-    },
-
-    resetMap() {
-        if (!this.map) return;
-
-        this.map.panTo(this.defaultCenter);
-        this.map.setZoom(this.defaultZoom);
     },
 
     createTagLine() {
@@ -199,6 +194,14 @@ const Map = {
         return card;
     },
 
+    resetMap() {
+        if (!this.map) return;
+
+        this.map.panTo(this.defaultCenter);
+        this.map.setZoom(this.defaultZoom);
+        this.map.setMapTypeId(this.defaultMapTypeId);
+    },
+
     async initializeMap(mapContainer) {
         setOptions({
             key: process.env.GOOGLE_MAPS_API_KEY,
@@ -212,6 +215,7 @@ const Map = {
             center: this.defaultCenter,
             zoom: this.defaultZoom,
             mapId: "DEMO_MAP_ID",
+            mapTypeId: this.defaultMapTypeId,
         });
 
         this.createMarkers(
@@ -257,7 +261,8 @@ const Map = {
 
     selectProject(project) {
         this.map.panTo(project.coordinates);
-        this.map.setZoom(12);
+        this.map.setZoom(17);
+        this.map.setMapTypeId("satellite");
     },
 
     navigateToProject(project) {

@@ -1,13 +1,14 @@
 import Caroline from "../../assets/main/projects/caroline_000_6742.jpg";
 import Jbs from "../../assets/main/projects/jbsusa-100_0049.jpg";
 import Foster from "../../assets/main/projects/fosterfarms-img_9854.jpg";
+import KochFoods from "../../assets/main/projects/kochfoods-20180315_115554.jpg";
 
 const projects = {
     caroline: {
         location: "Caroline County, Virginia",
         coordinates: {
-            lat: 38.036,
-            lng: -77.346
+            lat: 37.963,
+            lng: -77.420
         },
         name: "Caroline County",
         system: "New 1.5 MGD 5 Stage Biological Nutrient Removal WWTP",
@@ -32,10 +33,10 @@ const projects = {
         route: "caroline"
     },
     jbs: {
-        location: "Marshalltown, Indiana",
+        location: "Marshalltown, Iowa",
         coordinates: {
-            lat: 40.049,
-            lng: -92.445
+            lat: 42.057,
+            lng: -92.895
         },
         name: "JBS USA",
         system: "New 1.8 MGD Wastewater Pretreatment System",
@@ -56,8 +57,8 @@ const projects = {
     "foster-farms": {
         location: "Livingston, California",
         coordinates: {
-            lat: 37.386,
-            lng: -120.723
+            lat: 37.395,
+            lng: -120.729
         },
         name: "Foster Farms",
         system: "New 5.0 MGD 4 Stage Biological Nutrient Removal Wastewater Treatment System",
@@ -77,6 +78,28 @@ const projects = {
             "Automation and Controls",
         ],
         route: "foster-farms"
+    },
+    "koch-foods": {
+        location: "Collinsville, Alabama",
+        coordinates: {
+            lat: 34.295,
+            lng: -85.877
+        },
+        name: "Koch Foods",
+        system: "2.0 MGD Two-Stage MLE Activated Sludge Wastewater Treatment System",
+        text: "We were hired by Koch Foods to design a new 2.0 MGD Two-Stage MLE Activated Sludge Wastewater Treatment System to meet newly mandated ELG limits which required them to reduce Total Nitrogen down to 150 mg/l.",
+        image: KochFoods,
+        accomplishment: "",
+        components: [
+            "Anoxic Reactor #1 with Jet aeration and mixing",
+            "Aerobic/Nitrification Reactor #2 with Jet aeration and mixing",
+            "Final Clarifier",
+            "UV Disinfection",
+            "Cascade Aeration",
+            "Automation and Controls",
+            "New Equipment Building with Lab and Office",
+        ],
+        route: "koch-foods"
     },
 };
 
