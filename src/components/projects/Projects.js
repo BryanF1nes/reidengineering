@@ -66,7 +66,7 @@ const Projects = {
             "mx-auto"
         );
 
-        Object.entries(projects).forEach(([slug, project], index) => {
+        Object.entries(projects).slice(0, 3).forEach(([slug, project], index) => {
             container.appendChild(
                 this.createProject(project, index)
             );

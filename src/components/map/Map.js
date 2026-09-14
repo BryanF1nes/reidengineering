@@ -9,7 +9,7 @@ const Map = {
 
     defaultZoom: 4,
 
-    defaultMapTypeId: "roadmap",
+    defaultMapTypeId: "hybrid",
 
     render(container) {
         const section = document.createElement("section");
@@ -261,8 +261,7 @@ const Map = {
 
     selectProject(project) {
         this.map.panTo(project.coordinates);
-        this.map.setZoom(17);
-        this.map.setMapTypeId("satellite");
+        this.map.setZoom(project.zoom);
     },
 
     navigateToProject(project) {

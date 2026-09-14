@@ -10,6 +10,7 @@ const projects = {
             lat: 37.963,
             lng: -77.420
         },
+        zoom: 18,
         name: "Caroline County",
         system: "New 1.5 MGD 5 Stage Biological Nutrient Removal WWTP",
         text: "We were the Prime Engineer for the Design Build Wastewater Treatment Upgrade and Expansion Project for Caroline County Polecat Creek Regional WWTP through the Unsolicited PPEA (Public Private Partnership) process. The existing wastewater treatment plant was expanded form 4.5 MGD to 1.5 MGD and upgraded to provide Enhanced Nutrient Removal effluent limits of Total Nitrogen = 3.0 gm/l and Total Phosphorus = 0.3 mg/l. We utilize design practices that significantly reduced cost for the rural Virginia community.",
@@ -35,9 +36,10 @@ const projects = {
     jbs: {
         location: "Marshalltown, Iowa",
         coordinates: {
-            lat: 42.057,
+            lat: 42.058,
             lng: -92.895
         },
+        zoom: 18,
         name: "JBS USA",
         system: "New 1.8 MGD Wastewater Pretreatment System",
         text: "We were the Prime Engineer that was selected to design a new Single Stage Activated Sludge Pretreatment System that reduced BOD, TSS and Total Nitrogen prior to discharge to the City POTW.",
@@ -60,6 +62,7 @@ const projects = {
             lat: 37.395,
             lng: -120.729
         },
+        zoom: 17,
         name: "Foster Farms",
         system: "New 5.0 MGD 4 Stage Biological Nutrient Removal Wastewater Treatment System",
         text: "Foster Farms owns and operates the world’s largest chicken processing plant in Livingston, California. After several years of negotiations with the City of Livingston regarding sewer rates, Foster Farms elected to design and build their own Wastewater Treatment System. We were selected as the Prime Engineer and designed a Four-Stage Bardenpho Biological Nutrient Removal System to reduce Total Nitrogen to less than 10 mg/l.",
@@ -85,6 +88,7 @@ const projects = {
             lat: 34.295,
             lng: -85.877
         },
+        zoom: 18,
         name: "Koch Foods",
         system: "2.0 MGD Two-Stage MLE Activated Sludge Wastewater Treatment System",
         text: "We were hired by Koch Foods to design a new 2.0 MGD Two-Stage MLE Activated Sludge Wastewater Treatment System to meet newly mandated ELG limits which required them to reduce Total Nitrogen down to 150 mg/l.",
