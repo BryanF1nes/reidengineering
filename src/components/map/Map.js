@@ -158,7 +158,7 @@ const Map = {
 
         const viewProject = document.createElement("button");
 
-        viewProject.textContent = "See project";
+        viewProject.textContent = "View project";
 
         viewProject.classList.add(
             "shrink-0",
