@@ -100,7 +100,7 @@ const Map = {
             "overflow-y-auto",
             "flex",
             "flex-col",
-            "gap-3",
+            "gap-2",
             "pr-2",
             "max-lg:w-full",
             "max-lg:h-[300px]"
