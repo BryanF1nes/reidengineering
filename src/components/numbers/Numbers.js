@@ -2,13 +2,13 @@ const Numbers = {
     numbers: [
         {
             label: "States",
-            value: 40,
+            value: 37,
             suffix: "+"
         },
         {
-            label: "Satisfaction",
-            value: 99,
-            suffix: "%"
+            label: "Clients",
+            value: 100,
+            suffix: "+"
         },
         {
             label: "Projects",

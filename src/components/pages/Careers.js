@@ -23,12 +23,12 @@ const Careers = {
         image.src = logo;
         image.classList.add("h-[96px]", "w-[96px]");
 
-        div.classList.add("py-[96px]", "bg-bg", "flex", "flex-col", "items-center", "justify-center", "gap-4");
+        div.classList.add("py-[96px]", "bg-bg", "flex", "flex-col", "items-center", "justify-center", "gap-4", "max-md:px-4");
 
         notice.classList.add("text-h2", "font-semibold", "text-text-primary", "p-4");
         notice.textContent = "We're sorry.";
 
-        message.classList.add("text-body", "text-text-primary");
+        message.classList.add("text-body", "text-text-primary", "max-md:text-center");
         message.textContent = text;
 
         div.append(image, notice, message);
